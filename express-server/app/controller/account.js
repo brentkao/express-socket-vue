@@ -8,8 +8,12 @@ exports.login = (msg, send) => {
 
         const response = {
             code: "lg-0001",
-            msg: "Login Success!! \n Welcome to ParaZeni World ~",
-            data:{}
+            msg: "Login Success",
+            data:{
+                uid: account,
+                title:  "Login Success!!",
+                content:  "Welcome to ParaZeni World ~"
+            }
         }
 
         send(response);
