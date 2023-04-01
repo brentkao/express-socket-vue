@@ -1,6 +1,6 @@
 {
   "name": "express-socket-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "develop environment: ExpressJS & Socket.io & Vue",
   "main": "index.js",
   "scripts": {

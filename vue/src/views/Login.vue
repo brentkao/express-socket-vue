@@ -40,7 +40,7 @@ socket.on("login-response", (res) => {
 
 <template>
   <div class="container">
-    <img class="pz_logo img_setting" src="../assets/img/logo.tif" alt="ParaZeni">
+    <img class="pz_logo img_setting" src="../assets/img/parazeni_logo.jpg" alt="ParaZeni">
     <div class="inputAndBtn">
       <div class="inputContainer">
         <div class="inputBox">
@@ -58,8 +58,11 @@ socket.on("login-response", (res) => {
 </template>
 
 <style lang="scss" scoped>
+
 .container {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -81,19 +84,16 @@ socket.on("login-response", (res) => {
 .inputAndBtn {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items:  center;
   width: 100%;
   height: 100%;
 }
 
 .inputContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: size(340);
   height: size(108);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .inputContainer input {

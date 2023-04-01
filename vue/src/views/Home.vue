@@ -8,12 +8,14 @@ const { title, content } = homePinia.info;
 
 <template>
   <div class="container">
+    <img class="pz_logo img_setting" src="../assets/img/TCF.png" alt="ParaZeni">
     <p class="tit">{{ title }}</p>
     <p class="cont">{{ content }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
 .container {
   display: flex;
   flex-direction: column;
@@ -22,6 +24,14 @@ const { title, content } = homePinia.info;
   width: 100%;
   height: 100%;
   color: white;
+}
+.pz_logo {
+  position: absolute;
+  top: size(149);
+  left: size(387);
+  // width: size(1060);
+  height: 100%;
+  opacity: 0.5;
 }
 
 .tit{
