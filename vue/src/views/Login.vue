@@ -25,7 +25,7 @@ socket.on("login-response", (res) => {
 
   //! Fail
   if(code !== "lg-0001"){ 
-    console.log("Login Fail", msg); 
+    return console.log("Login Fail", msg); 
   }
   
   //! Success
