@@ -1,0 +1,22 @@
+{
+  "name": "express-socket-vue",
+  "version": "1.0.0",
+  "description": "develop environment: ExpressJS & Socket.io & Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentkao/express-socket-vue.git"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "ParaZeni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brentkao/express-socket-vue/issues"
+  },
+  "homepage": "https://github.com/brentkao/express-socket-vue#readme"
+}
