@@ -1,10 +1,18 @@
 const express = require('express');
+const { send } = require('process');
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
+const port = process.env.PORT || 3000;
+const path = require('path')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
+app.get('/', function(req, res) {
+
+  res.sendFile(path.join(__dirname, '/public/dist/index.html'));
+});
 
 
 
@@ -13,6 +21,6 @@ require('./app/router')(app,io);
 
 
 
-http.listen(3000, function () {
-    console.log('listening on *:3000');
+http.listen(port, function () {
+    console.log('listening on *:'+port);
   });
