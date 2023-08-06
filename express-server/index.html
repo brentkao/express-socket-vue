@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaZeni OpenAPI</title>
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    HELLO
+    <div class="inputAndBtn">
+        <div class="inputContainer">
+            <div class="inputBox">
+                <label for="account">Account:</label>
+                <input type="text" id="account" value="account01">
+                <label for="password">Password:</label>
+                <input type="password" id="password" value="password1234">
+            </div>
+        </div>
+        <div class="btnContainer">
+            <button onclick="login()">Sign In</button>
+        </div>
+    </div>
+    <script>
+        let socket = io('');
+
+        socket.on("connect", (res) => {
+            console.log("#connect: ", res);
+        });
+        socket.on("message", (res) => {
+            console.log("#message: ", res);
+        });
+        socket.on('disconnect', () => {
+            console.log('断开连接')
+        })
+        socket.on('login-response', (msg) => {
+            console.log(msg)
+        })
+
+
+        function login() {
+            let account = document.getElementById('account').value;
+            let password = document.getElementById('password').value;
+            console.log(account,password);
+            socket.emit("login", { account, password });
+        }
+    </script>
+</body>
+
+</html>

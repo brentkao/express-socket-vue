@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 app.get('/', function(req, res) {
-
-  res.sendFile(path.join(__dirname, '/public/dist/index.html'));
+  console.log("123");
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 
