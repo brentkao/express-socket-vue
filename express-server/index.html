@@ -39,6 +39,12 @@
         socket.on('login-response', (msg) => {
             console.log(msg)
         })
+        socket.on('broadcaster', (msg) => {
+            console.log(msg);
+            let div = document.createElement('h1')
+            div.textContent = `${msg.msg}`;
+            document.body.append(div);
+        })
 
 
         function login() {
